@@ -2,9 +2,14 @@ package com.jaca.jetpacktest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.jaca.jetpacktest.`interface`.IMainCallBack
+import com.jaca.jetpacktest.frag.ReceiveDataFragment
+import com.jaca.jetpacktest.frag.ShareDataFragment
 import com.jaca.jetpacktest.presenter.MainPresenter
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IMainCallBack {
 
     private lateinit var mainPresenter: MainPresenter
 
@@ -13,5 +18,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         mainPresenter = MainPresenter()
         lifecycle.addObserver(mainPresenter)
+
+        initListener()
+    }
+
+    private fun initListener() {
+        findViewById<TextView>(R.id.tv_add_share_frag).setOnClickListener {
+            navigator2ShareDataFrag()
+        }
+    }
+
+    private fun navigator2ShareDataFrag() {
+        showScreen(ShareDataFragment.newInstance(), ShareDataFragment.TAG)
+    }
+
+    override fun navigator2ReceiveDataFrag() {
+        showScreen(ReceiveDataFragment.newInstance(), ReceiveDataFragment.TAG)
+    }
+
+    private fun showScreen(fragment: Fragment, tag: String, isReplace: Boolean = false) {
+        val beginTransaction = supportFragmentManager.beginTransaction()
+        val containerId = R.id.fl_root_view
+        supportFragmentManager.findFragmentById(containerId)?.let { beginTransaction.hide(it) }
+        if (isReplace) {
+            beginTransaction.replace(containerId, fragment, tag).commit()
+        } else {
+            beginTransaction.add(containerId, fragment, tag).addToBackStack(tag).commit()
+        }
     }
 }
