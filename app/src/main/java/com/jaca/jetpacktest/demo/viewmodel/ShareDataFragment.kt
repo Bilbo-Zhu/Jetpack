@@ -1,4 +1,4 @@
-package com.jaca.jetpacktest.frag
+package com.jaca.jetpacktest.demo.viewmodel
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.jaca.jetpacktest.MainActivity
 import com.jaca.jetpacktest.R
 import com.jaca.jetpacktest.`interface`.IMainCallBack
-import com.jaca.jetpacktest.viewmodel.FragSharedViewModel
-import com.jaca.jetpacktest.viewmodel.factory.FragSharedViewModelFactory
 
 class ShareDataFragment : Fragment() {
 

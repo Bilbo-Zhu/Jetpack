@@ -5,8 +5,9 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.jaca.jetpacktest.`interface`.IMainCallBack
-import com.jaca.jetpacktest.frag.ReceiveDataFragment
-import com.jaca.jetpacktest.frag.ShareDataFragment
+import com.jaca.jetpacktest.demo.livedata.LiveDataFragment
+import com.jaca.jetpacktest.demo.viewmodel.ReceiveDataFragment
+import com.jaca.jetpacktest.demo.viewmodel.ShareDataFragment
 import com.jaca.jetpacktest.presenter.MainPresenter
 
 class MainActivity : AppCompatActivity(), IMainCallBack {
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity(), IMainCallBack {
     private fun initListener() {
         findViewById<TextView>(R.id.tv_add_share_frag).setOnClickListener {
             navigator2ShareDataFrag()
+        }
+        findViewById<TextView>(R.id.tv_live_data).setOnClickListener {
+            showScreen(LiveDataFragment.newInstance(), LiveDataFragment.TAG)
         }
     }
 

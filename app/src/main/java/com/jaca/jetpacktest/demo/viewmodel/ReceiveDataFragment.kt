@@ -1,4 +1,4 @@
-package com.jaca.jetpacktest.frag
+package com.jaca.jetpacktest.demo.viewmodel
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.jaca.jetpacktest.R
-import com.jaca.jetpacktest.viewmodel.FragSharedViewModel
-import com.jaca.jetpacktest.viewmodel.factory.FragSharedViewModelFactory
 
 class ReceiveDataFragment : Fragment() {
 

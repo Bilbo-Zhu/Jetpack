@@ -1,4 +1,4 @@
-package com.jaca.jetpacktest.viewmodel
+package com.jaca.jetpacktest.demo.viewmodel
 
 import androidx.lifecycle.ViewModel
 

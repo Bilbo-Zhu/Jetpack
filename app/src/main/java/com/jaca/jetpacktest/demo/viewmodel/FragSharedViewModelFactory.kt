@@ -1,8 +1,7 @@
-package com.jaca.jetpacktest.viewmodel.factory
+package com.jaca.jetpacktest.demo.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.jaca.jetpacktest.viewmodel.FragSharedViewModel
 
 class FragSharedViewModelFactory(): ViewModelProvider.Factory {
 

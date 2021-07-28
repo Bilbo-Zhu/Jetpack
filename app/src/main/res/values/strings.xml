@@ -3,4 +3,6 @@
     <string name="add_share_fragment">Add Share Fragment</string>
     <string name="hello_receive_fragment">Hello receive fragment</string>
     <string name="hello_share_fragment">Hello share fragment</string>
+    <string name="live_data_demo">LiveData Demo</string>
+    <string name="live_data_add_click_value">click</string>
 </resources>
