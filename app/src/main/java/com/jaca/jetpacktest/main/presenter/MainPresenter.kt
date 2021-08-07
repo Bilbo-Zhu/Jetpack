@@ -1,4 +1,4 @@
-package com.jaca.jetpacktest.presenter
+package com.jaca.jetpacktest.main.presenter
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
