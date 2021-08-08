@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jaca.jetpacktest.R
-import com.jaca.jetpacktest.main.`interface`.IMainCallBack
+import com.jaca.jetpacktest.main.listener.IMainCallBack
 import com.jaca.jetpacktest.base.BindingActivity
 import com.jaca.jetpacktest.databinding.ActivityMainBinding
 import com.jaca.jetpacktest.main.adapter.MainTextItemViewBinder

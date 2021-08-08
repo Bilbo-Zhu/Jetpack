@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.jaca.jetpacktest.main.MainActivity
 import com.jaca.jetpacktest.R
-import com.jaca.jetpacktest.main.`interface`.IMainCallBack
+import com.jaca.jetpacktest.main.listener.IMainCallBack
 
 class ShareDataFragment : Fragment() {
 

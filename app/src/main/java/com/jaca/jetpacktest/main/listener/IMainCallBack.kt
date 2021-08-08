@@ -1,4 +1,4 @@
-package com.jaca.jetpacktest.main.`interface`
+package com.jaca.jetpacktest.main.listener
 
 interface IMainCallBack {
     fun navigator2ReceiveDataFrag()
