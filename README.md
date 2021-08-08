@@ -133,6 +133,13 @@ ObservableDouble
 ObservableParcelable
 ObservableFeild
 
+6.自定义适配器
+`
+@BindingAdapter("deleteLine")
+` 
+
+7. 数据双向绑定 （TODO）
+
 **Reference**:
 1) [Jetpack官方中文文档](https://developer.android.com/topic/libraries/data-binding/expressions?hl=zh-cn)；
 2）[DataBinding最全使用说明](https://juejin.cn/post/6844903549223059463)
