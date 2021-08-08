@@ -1,4 +1,4 @@
-# Jetpack
+# Jetpack 
 
 Welcome to the Jetpack wiki!
 
@@ -76,4 +76,45 @@ myLifecycleOwner.getLifecycle().addObserver(MyObserver())
 
 ## **DataBinding**
 
+* **引入DataBinding的意义**：让UI界面和布局解藕，原来依赖在UI界面通过findViewById找到view设置数据的模式，现在通过数据绑定库可以自动实现布局和数据类相互绑定。
+
+* **DataBinding的使用**：
+1. 在module的gradle文件中启用DataBinding:
+
+`
+    dataBinding {
+        //noinspection DataBindingWithoutKapt
+        enabled = true
+    }
+`
+
+2. 布局：
+
+![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/xml.png)
+
+>1).layout:布局根节点必须是<layout> . 同时layout只能包含一个View标签. 不能直接包含<merge>;
+>2).data:<data>标签的内容即DataBinding的数据. data标签只能存在一个;
+>3).variable:通过<variable>标签可以指定类, 然后在控件的属性值中就可以使用;
+
+3. 获取系统自动生成的绑定文件
+> Activity中获取：
+`
+val binding: ActivityMainBinding = DataBindingUtil.setContentView(
+                this, R.layout.activity_main)
+`
+或者
+`
+val binding: ActivityMainBinding = ActivityMainBinding.inflate(getLayoutInflater())
+`
+
+> Fragment中或者适配器中获取：
+`
+val listItemBinding = ListItemBinding.inflate(layoutInflater, viewGroup, false)
+    // or
+    val listItemBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false)
+`
+
+**Reference**:
+1) [Jetpack官方中文文档](https://developer.android.com/topic/libraries/data-binding/expressions?hl=zh-cn)；
+2）[DataBinding最全使用说明](https://juejin.cn/post/6844903549223059463)
 
