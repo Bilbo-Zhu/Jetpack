@@ -1,6 +1,4 @@
-# Jetpack 
-
-Welcome to the Jetpack wiki!
+# Welcome to the Jetpack wiki!
 
 ## **LifeCycle**
 
@@ -23,7 +21,7 @@ class MyObserver : LifecycleObserver {
 myLifecycleOwner.getLifecycle().addObserver(MyObserver())
 
 * **LifeCycle可以跟踪哪些生命周期变化**：
-![](https://github.com/CaptainsZhu/Jetpack/blob/main/lifeCycle_event_status.png)
+![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/pic/lifeCycle_event_status.png)
 
 * **注意**：
 1. 原生的Activity和Fragment已经继承了LifeCycleOwner接口
@@ -41,7 +39,7 @@ myLifecycleOwner.getLifecycle().addObserver(MyObserver())
 * **ViewModel特点**：具有感知Activity和Fragment生命周期的特点。基于这个特点，同时ViewModel可以避免内存泄漏
 
 * **ViewModel生命周期**：
-![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/viewmodel-lifecycle.png)
+![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/pic/viewmodel-lifecycle.png)
 
 * **ViewModel解决什么问题**：
 1. ViewModel可以在界面因为系统发生变化重建时候依然可以保存数据;
@@ -90,7 +88,7 @@ myLifecycleOwner.getLifecycle().addObserver(MyObserver())
 
 2. 布局：
 
-![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/xml.png)
+![](https://github.com/Bilbo-Zhu/Jetpack/blob/main/pic/xml.png)
 
 >1).layout:布局根节点必须是<layout> . 同时layout只能包含一个View标签. 不能直接包含<merge>;
 >2).data:<data>标签的内容即DataBinding的数据. data标签只能存在一个;
@@ -114,7 +112,27 @@ val listItemBinding = ListItemBinding.inflate(layoutInflater, viewGroup, false)
     val listItemBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false)
 `
 
+4. 事件处理：
+> 方法引用：
+`
+android:onClick="@{handlers::onClickFriend}"
+` 
+
+> 监听绑定：android:onCheckedChanged="@{(cb, isChecked) -> presenter.completeChanged(task, isChecked)}"
+
+5. 可观察字段使用：
+> 常用可观察字段（已经满足日常的开发使用）：
+ObservableBoolean
+ObservableByte
+ObservableChar
+ObservableShort
+ObservableInt
+ObservableLong
+ObservableFloat
+ObservableDouble
+ObservableParcelable
+ObservableFeild
+
 **Reference**:
 1) [Jetpack官方中文文档](https://developer.android.com/topic/libraries/data-binding/expressions?hl=zh-cn)；
 2）[DataBinding最全使用说明](https://juejin.cn/post/6844903549223059463)
-
