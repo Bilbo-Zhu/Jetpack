@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.jaca.jetpacktest.R
+import com.jaca.jetpacktest.demo.databinding.DataBindingFragment
 import com.jaca.jetpacktest.demo.livedata.LiveDataFragment
 import com.jaca.jetpacktest.demo.viewmodel.ReceiveDataFragment
 import com.jaca.jetpacktest.demo.viewmodel.ShareDataFragment
@@ -12,16 +13,20 @@ class MainNavigatorProvider(
     private val supportFragmentManager: FragmentManager,
 ) {
 
-    fun onAddShareFragClick() {
+    fun navigator2ShareDataFrag() {
         showScreen(ShareDataFragment.newInstance(), ShareDataFragment.TAG)
     }
 
-    fun onAddLiveDataFragClick() {
+    fun navigator2LiveDataFrag() {
         showScreen(LiveDataFragment.newInstance(), LiveDataFragment.TAG)
     }
 
     fun navigator2ReceiveDataFrag() {
         showScreen(ReceiveDataFragment.newInstance(), ReceiveDataFragment.TAG)
+    }
+
+    fun navigator2DataBindingFrag() {
+        showScreen(DataBindingFragment.newInstance(), DataBindingFragment.TAG)
     }
 
     private fun showScreen(fragment: Fragment, tag: String, isReplace: Boolean = false) {

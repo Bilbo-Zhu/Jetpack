@@ -2,6 +2,7 @@ package com.jaca.jetpacktest.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jaca.jetpacktest.R
 import com.jaca.jetpacktest.main.`interface`.IMainCallBack
@@ -10,13 +11,14 @@ import com.jaca.jetpacktest.databinding.ActivityMainBinding
 import com.jaca.jetpacktest.main.adapter.MainTextItemViewBinder
 import com.jaca.jetpacktest.main.bean.MainTextData
 import com.jaca.jetpacktest.main.presenter.MainViewModel
+import com.jaca.jetpacktest.main.presenter.MainViewModelFactory
 import com.jaca.jetpacktest.main.provider.MainNavigatorProvider
 import me.drakeet.multitype.MultiTypeAdapter
 
 class MainActivity : BindingActivity<ActivityMainBinding>(), IMainCallBack {
 
     private val mainViewModel: MainViewModel by lazy {
-        MainViewModel(application)
+        ViewModelProvider(this, MainViewModelFactory(application)).get(MainViewModel::class.java)
     }
     private val mainNavigatorProvider: MainNavigatorProvider by lazy {
         MainNavigatorProvider(supportFragmentManager)

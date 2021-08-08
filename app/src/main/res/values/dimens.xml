@@ -2,4 +2,29 @@
 <resources>
     <dimen name="grid_1">1dp</dimen>
     <dimen name="grid_20">20dp</dimen>
+
+    <dimen name="font_size_8">8sp</dimen>
+    <dimen name="small_font">12sp</dimen>
+    <dimen name="medium_font">14sp</dimen>
+    <dimen name="normal_font">16sp</dimen>
+    <dimen name="big_font">18sp</dimen>
+    <dimen name="large_font">20sp</dimen>
+    <dimen name="font_size_4">4sp</dimen>
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_22">22sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_26">26sp</dimen>
+    <dimen name="font_size_28">28sp</dimen>
+    <dimen name="font_size_30">30sp</dimen>
+    <dimen name="font_size_32">32sp</dimen>
+    <dimen name="font_size_36">36sp</dimen>
+    <dimen name="font_size_huge">40sp</dimen>
+    <dimen name="font_size_44">44sp</dimen>
+    <dimen name="font_size_48">48sp</dimen>
 </resources>

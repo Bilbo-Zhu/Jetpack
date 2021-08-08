@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="navigatorProvider"
-            type="com.jaca.jetpacktest.main.provider.MainNavigatorProvider" />
+            name="holder"
+            type="com.jaca.jetpacktest.main.adapter.TextHolder" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +21,7 @@
             android:id="@+id/tv_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> navigatorProvider.onAddShareFragClick()}"
+            android:onClick="@{() -> holder.onClick()}"
             android:text="@string/add_share_fragment"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
