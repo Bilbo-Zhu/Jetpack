@@ -46,6 +46,10 @@ dependencies {
     //support multiTypeAdapter https://github.com/drakeet/MultiType/tree/v3.5.0
     implementation 'me.drakeet.multitype:multitype:3.5.0'
     implementation 'me.drakeet.multitype:multitype-ktx:3.5.0'
+
+    // room
+    implementation("androidx.room:room-runtime:2.3.0")
+    annotationProcessor "androidx.room:room-compiler:2.3.0"
 }
 
 dependencies {
